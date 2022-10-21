@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "minecraft";
+  src: url(../font/minecraft.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "minecraft";
+}
+
+.startContainer {
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  z-index: 13;
+  display: grid;
+  place-items: center;
+  background-color: brown;
+  display: none;
+}
+.startContainer #start {
+  font-size: 1.5rem;
+  padding: 0 8px;
+  line-height: 2rem;
+  color: white;
+  text-shadow: 2px 3px rgba(0, 0, 0, 0.386);
+  background-color: gray;
+  border: 1px solid black;
+  box-shadow: inset 2px 2px #9a9a9a;
+  font-family: "minecraft";
+}
+.startContainer #start:hover {
+  cursor: pointer;
+}
+
+.gameContainer {
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: rgba(0, 0, 0, 0.214);
+  display: flex;
+  justify-content: center;
+}
+.gameContainer .ControlsPanel {
+  place-self: flex-end;
+  position: absolute;
+  z-index: 12;
+  min-height: 3.5rem;
+  width: 20rem;
+  background-color: rgba(0, 64, 160, 0.931);
+  transition: all 0.5s ease-in;
+  display: grid;
+  place-items: center;
+}
+.gameContainer .ControlsPanel .Tools {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gameContainer .ControlsPanel .Tools .pickaxe {
+  background: url(../images/pickaxe.png) center center/cover no-repeat;
+}
+.gameContainer .ControlsPanel .Tools .axe {
+  background: url(../images/axe.png) center center/cover no-repeat;
+}
+.gameContainer .ControlsPanel .Tools .Tool {
+  height: 50px;
+  width: 50px;
+  border: white 1px solid;
+  cursor: pointer;
+}
+.gameContainer .ControlsPanel .Tools .shovel {
+  background: url(../images/shovel.png) center center/contain no-repeat;
+}
+.gameContainer .gridBoard {
+  z-index: 11;
+  background-color: rgb(135, 200, 222);
+  height: 100vmin;
+  width: 100vmin;
+}
+.gameContainer .gridBoard {
+  display: grid;
+  grid-template: repeat(16, 6.25%)/repeat(16, 6.25%);
+}
+
+.grid-item {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+.ground {
+  background: url(../images/ground.jpg) center center/cover no-repeat;
+}
+
+.tree {
+  background: url(../images/tree.png) center center/cover no-repeat;
+}
+
+.grass {
+  background: url(../images/grass.png) center center/cover no-repeat;
+}
+
+.leaves {
+  background: url(../images/tree-leaves.png) center center/cover no-repeat;
+}
+
+.rock {
+  background: url(../images/rockR.png) center center/cover no-repeat;
+}
+
+.selected {
+  border: 2px solid red !important;
+}
+
+/*# sourceMappingURL=main.css.map */
