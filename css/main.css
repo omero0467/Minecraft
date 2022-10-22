@@ -49,11 +49,11 @@ body {
   justify-content: center;
 }
 .gameContainer .ControlsPanel {
-  place-self: flex-end;
+  place-self: flex-start;
   position: absolute;
   z-index: 12;
   min-height: 3.5rem;
-  width: 20rem;
+  width: 90vh;
   background-color: rgba(0, 107, 160, 0.931);
   transition: all 0.5s ease-in;
   display: grid;
@@ -73,8 +73,8 @@ body {
   background: url(../images/axe.png) center center/cover no-repeat;
 }
 .gameContainer .ControlsPanel .Tools .Tool {
-  height: 50px;
-  width: 50px;
+  height: clamp(30px, 10vh, 50px);
+  width: clamp(30px, 10vh, 50px);
   border: white 1px solid;
   cursor: pointer;
 }
@@ -100,22 +100,32 @@ body {
 
 .ground {
   background: url(../images/ground.jpg) center center/cover no-repeat;
+  color: white;
+  text-shadow: 2px 3px rgba(0, 0, 0, 0.786);
 }
 
 .tree {
   background: url(../images/tree.png) center center/cover no-repeat;
+  color: white;
+  text-shadow: 2px 3px rgba(0, 0, 0, 0.786);
 }
 
 .grass {
   background: url(../images/grass.png) center center/cover no-repeat;
+  color: white;
+  text-shadow: 2px 3px rgba(0, 0, 0, 0.786);
 }
 
 .leaves {
   background: url(../images/tree-leaves.png) center center/cover no-repeat;
+  color: white;
+  text-shadow: 2px 3px rgba(0, 0, 0, 0.786);
 }
 
 .rock {
   background: url(../images/rockR.png) center center/cover no-repeat;
+  color: white;
+  text-shadow: 2px 3px rgba(0, 0, 0, 0.786);
 }
 
 .selected {
@@ -138,7 +148,7 @@ body {
 .backpackOverlay {
   position: absolute;
   z-index: 14;
-  background-color: #f4f4f4;
+  background: #f4f67a;
   border-radius: 0.5rem;
   width: 55vmin;
   height: 30vmin;
@@ -179,9 +189,21 @@ body {
   width: 100%;
   display: grid;
   place-content: center;
+  font-size: calc(1rem - 0.5vh);
+  color: white;
+  text-shadow: 2px 3px rgba(0, 0, 0, 0.386);
 }
 .reset:hover {
   box-shadow: -2px -2px #edeaea;
+}
+
+.inventory {
+  display: grid;
+  place-content: center;
+  background: url(../images/Chest.webp) center center/cover no-repeat;
+  color: white;
+  text-shadow: 2px 3px rgba(0, 0, 0, 0.386);
+  font-size: calc(1rem - 0.8vh);
 }
 
 /*# sourceMappingURL=main.css.map */
