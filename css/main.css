@@ -181,6 +181,7 @@ body {
   margin-top: 0.5rem;
   place-self: start end;
   cursor: pointer;
+  filter: invert(0.2);
 }
 
 .reset {
