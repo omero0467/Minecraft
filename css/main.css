@@ -10,6 +10,11 @@
 
 body {
   font-family: "minecraft";
+  background-color: rgba(189, 192, 1, 0.214);
+}
+
+.logo img {
+  height: 20vh;
 }
 
 .startContainer {
@@ -19,8 +24,7 @@ body {
   z-index: 13;
   display: grid;
   place-items: center;
-  background-color: brown;
-  display: none;
+  background: url(../images/startBackground.png) center center/cover no-repeat;
 }
 .startContainer #start {
   font-size: 1.5rem;
@@ -38,9 +42,9 @@ body {
 }
 
 .gameContainer {
-  min-height: 100vh;
+  min-height: 100%;
   min-width: 100%;
-  background-color: rgba(0, 0, 0, 0.214);
+  background-color: rgba(189, 192, 1, 0.214);
   display: flex;
   justify-content: center;
 }
@@ -50,7 +54,7 @@ body {
   z-index: 12;
   min-height: 3.5rem;
   width: 20rem;
-  background-color: rgba(0, 64, 160, 0.931);
+  background-color: rgba(0, 107, 160, 0.931);
   transition: all 0.5s ease-in;
   display: grid;
   place-items: center;
@@ -79,7 +83,7 @@ body {
 }
 .gameContainer .gridBoard {
   z-index: 11;
-  background-color: rgb(135, 200, 222);
+  background-color: rgb(79, 176, 255);
   height: 100vmin;
   width: 100vmin;
 }
@@ -146,9 +150,10 @@ body {
   width: 30vmin;
   height: 20vmin;
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   place-self: center;
+  cursor: pointer;
 }
 .backpackOverlay .avatar {
   place-self: center;
@@ -163,6 +168,20 @@ body {
   margin-right: 0.5rem;
   margin-top: 0.5rem;
   place-self: start end;
+  cursor: pointer;
+}
+
+.reset {
+  background: url(../images/Stone.webp);
+  border: black 1px solid;
+  box-shadow: inset 2px 2px #cccccc;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+.reset:hover {
+  box-shadow: -2px -2px #edeaea;
 }
 
 /*# sourceMappingURL=main.css.map */
